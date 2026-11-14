@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://gb1cjgk3l41t"]
+
+[ext_resource type="Texture2D" uid="uid://c26q10c7g7wl8" path="res://Autumn Town Asset Pack/Animations/Enemy Sprite Sheets/hero-bg.png" id="1_8com5"]
+[ext_resource type="Texture2D" uid="uid://d04o7ndo02ilb" path="res://Autumn Town Asset Pack/Animations/Enemy Sprite Sheets/ca382d56-3ca0-4d3a-b604-08cca287ea61-removebg-preview.png" id="1_j8e6v"]
+[ext_resource type="Script" uid="uid://cdcji5lymwsl" path="res://incio.gd" id="1_p4elx"]
+[ext_resource type="Texture2D" uid="uid://dk6j3himtl87b" path="res://Autumn Town Asset Pack/Animations/Enemy Sprite Sheets/haven-logo-final.png" id="3_p4elx"]
+
+[sub_resource type="FontVariation" id="FontVariation_n7y47"]
+
+[node name="Control" type="Control" unique_id=1283632433]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p4elx")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=18157955]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(14.416673, 14.416673, 14.416673, 1)
+
+[node name="TextureRect3" type="TextureRect" parent="ColorRect" unique_id=867435145]
+layout_mode = 0
+offset_left = -36.0
+offset_top = -50.0
+offset_right = 1170.6791
+offset_bottom = 805.0
+texture = ExtResource("1_8com5")
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=465762244]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 249.00002
+offset_right = 1107.0
+offset_bottom = 858.1372
+rotation = -0.5305801
+texture = ExtResource("1_j8e6v")
+
+[node name="TextureRect2" type="TextureRect" parent="ColorRect" unique_id=939539587]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 19.0
+offset_right = 304.21182
+offset_bottom = 206.0
+texture = ExtResource("3_p4elx")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=377082391]
+self_modulate = Color(0.74138474, 0.7413847, 0.74138457, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -201.0
+offset_top = -72.5
+offset_right = 201.0
+offset_bottom = 72.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=59376307]
+modulate = Color(0.9882353, 0.5254902, 0.08627451, 1)
+self_modulate = Color(1, 1, 1, 0.92156863)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_fonts/font = SubResource("FontVariation_n7y47")
+theme_override_font_sizes/font_size = 100
+text = "Play"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=2096146239]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -45.0
+offset_right = 172.0
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="VBoxContainer2" unique_id=39752462]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 0.9843137)
+theme_override_colors/font_focus_color = Color(0.9490196, 0.9490196, 0.9490196, 1)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0.49411765)
+theme_override_colors/font_outline_color = Color(0.18000486, 0.18000486, 0.18000486, 0.38431373)
+theme_override_font_sizes/font_size = 48
+text = "@haven.ctg"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
